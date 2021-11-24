@@ -177,8 +177,22 @@
     <Compile Include="Migrations\202111242040353_Initial.Designer.cs">
       <DependentUpon>202111242040353_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111242113271_AddGigGenreTablesToDb.cs" />
+    <Compile Include="Migrations\202111242113271_AddGigGenreTablesToDb.Designer.cs">
+      <DependentUpon>202111242113271_AddGigGenreTablesToDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111242125011_AddNewConventionsGigsGenres.cs" />
+    <Compile Include="Migrations\202111242125011_AddNewConventionsGigsGenres.Designer.cs">
+      <DependentUpon>202111242125011_AddNewConventionsGigsGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111242126212_SeedGenres.cs" />
+    <Compile Include="Migrations\202111242126212_SeedGenres.Designer.cs">
+      <DependentUpon>202111242126212_SeedGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -260,6 +274,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202111242040353_Initial.resx">
       <DependentUpon>202111242040353_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111242113271_AddGigGenreTablesToDb.resx">
+      <DependentUpon>202111242113271_AddGigGenreTablesToDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111242125011_AddNewConventionsGigsGenres.resx">
+      <DependentUpon>202111242125011_AddNewConventionsGigsGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111242126212_SeedGenres.resx">
+      <DependentUpon>202111242126212_SeedGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
