@@ -26,6 +26,8 @@ namespace GigHubApplication.Models
     {
         public DbSet<Gig> Gigs { get; set; }
         public DbSet<Genre> Genres { get; set; }
+
+        public DbSet<Attendance> Attendances { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -35,5 +37,16 @@ namespace GigHubApplication.Models
         {
             return new ApplicationDbContext();
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Attendance>()
+                .HasRequired(a => a.Gig)
+                .WithMany() //understands with many attendances. I don't write it because i dont have icollection of attendances in gig model
+                .WillCascadeOnDelete(false);
+                
+            base.OnModelCreating(modelBuilder);
+        }
+
     }
 }
