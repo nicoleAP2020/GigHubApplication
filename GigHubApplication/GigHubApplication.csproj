@@ -178,6 +178,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Api\GigsController.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
     <Compile Include="Controllers\FolloweesController.cs" />
     <Compile Include="Controllers\FollowingsController.cs" />
@@ -222,6 +223,10 @@
     <Compile Include="Migrations\202111281503410_AddFollowingToDb.cs" />
     <Compile Include="Migrations\202111281503410_AddFollowingToDb.Designer.cs">
       <DependentUpon>202111281503410_AddFollowingToDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112051031357_IsCancelled.cs" />
+    <Compile Include="Migrations\202112051031357_IsCancelled.Designer.cs">
+      <DependentUpon>202112051031357_IsCancelled.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -336,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111281503410_AddFollowingToDb.resx">
       <DependentUpon>202111281503410_AddFollowingToDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112051031357_IsCancelled.resx">
+      <DependentUpon>202112051031357_IsCancelled.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
