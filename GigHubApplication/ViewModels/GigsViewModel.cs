@@ -11,5 +11,7 @@ namespace GigHubApplication.ViewModels
         public IEnumerable<Gig> UpcomingGigs { get; set; }
 
         public bool ShowActions { get; set; } //when true-> I have buttons in index  when false->no buttons in index
+
+        public string Heading { get; set; }
     }
 }
