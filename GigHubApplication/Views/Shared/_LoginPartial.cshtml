@@ -12,12 +12,13 @@
                 @User.Identity.GetUserName()
             <span class="caret"></span>
         </a>
-        <ul class="dropdown-menu">
-            <li><a href="@Url.Action("Attending","Gigs")">Gigs I'm Going</a></li>
-            <li><a href="@Url.Action("Index","Followees")">Artists I 'm following</a></li>
-            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+            <ul class="dropdown-menu">
+                <li><a href="@Url.Action("Mine","Gigs")">My upcoming gigs</a></li>
+                <li><a href="@Url.Action("Attending","Gigs")">Gigs I'm Going</a></li>
+                <li><a href="@Url.Action("Index","Followees")">Artists I 'm following</a></li>
+                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
 
-        </ul>
+            </ul>
         </li>
     </ul>
     }

@@ -18,6 +18,19 @@ namespace GigHubApplication.Controllers
             _context = new ApplicationDbContext();
         }
 
+        [Authorize]
+        public ActionResult Mine()
+        {
+            var userId = User.Identity.GetUserId();
+
+            var gigs = _context.Gigs
+                .Where(g => g.ArtistId == userId && g.DateTime > DateTime.Now)
+                .Include(g=>g.Genre)
+                .ToList();
+
+            return View(gigs);
+        }
+
 
         [Authorize]
         public ActionResult Attending()
@@ -76,7 +89,7 @@ namespace GigHubApplication.Controllers
             _context.Gigs.Add(gig);
             _context.SaveChanges();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Mine", "Gigs");
         }
 
     }
